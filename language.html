@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Select Language</title>
+
+    <link rel="stylesheet" href="language.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="phone">
+
+        <div class="screen">
+
+
+            <!-- LANGUAGE ICON -->
+
+            <div class="language-icon">
+                🌐
+            </div>
+
+
+            <!-- HEADING -->
+
+            <div class="heading">
+
+                <h1>Select Language</h1>
+
+                <p>भाषा चुनें / Choose your language</p>
+
+            </div>
+
+
+            <!-- LANGUAGE OPTIONS -->
+
+            <div class="languages">
+
+
+                <!-- ENGLISH -->
+
+                <div class="language-card"
+                     onclick="selectLanguage('English')">
+
+                    <div class="country-code">
+                        IN
+                    </div>
+
+                    <div class="language-name">
+
+                        <h2>English</h2>
+
+                        <p>English</p>
+
+                    </div>
+
+                    <div class="arrow">
+                        ›
+                    </div>
+
+                </div>
+
+
+
+                <!-- HINDI -->
+
+                <div class="language-card"
+                     onclick="selectLanguage('Hindi')">
+
+                    <div class="country-code">
+                        IN
+                    </div>
+
+                    <div class="language-name">
+
+                        <h2>हिंदी</h2>
+
+                        <p>Hindi</p>
+
+                    </div>
+
+                    <div class="arrow">
+                        ›
+                    </div>
+
+                </div>
+
+
+
+                <!-- TAMIL -->
+
+                <div class="language-card"
+                     onclick="selectLanguage('Tamil')">
+
+                    <div class="country-code">
+                        IN
+                    </div>
+
+                    <div class="language-name">
+
+                        <h2>தமிழ்</h2>
+
+                        <p>Tamil</p>
+
+                    </div>
+
+                    <div class="arrow">
+                        ›
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- BOTTOM CORNERS -->
+
+            <div class="corner bottom-left"></div>
+
+            <div class="corner bottom-right"></div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- LANGUAGE SELECTION -->
+
+    <script>
+
+        function selectLanguage(language) {
+
+            // Save selected language
+            localStorage.setItem("selectedLanguage", language);
+
+            // Open Home Screen
+            window.location.href = "home.html";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

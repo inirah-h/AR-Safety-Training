@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #eeeeee;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+
+/* FULL LAPTOP SCREEN */
+
+.phone {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+
+/* MAIN SCREEN */
+
+.screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    border-radius: 0;
+
+    background:
+        linear-gradient(
+            160deg,
+            #071812,
+            #10291e 55%,
+            #101c24
+        );
+
+    color: white;
+}
+
+
+/* BACKGROUND GRID */
+
+.grid {
+    position: absolute;
+    inset: 0;
+
+    opacity: 0.25;
+
+    background-image:
+        linear-gradient(rgba(24,190,91,.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(24,190,91,.15) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+}
+
+
+/* CORNERS */
+
+.corner {
+    position: absolute;
+
+    width: 30px;
+    height: 30px;
+
+    border-color: rgba(24,190,91,.35);
+}
+
+.top-left {
+    top: 25px;
+    left: 30px;
+
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.top-right {
+    top: 25px;
+    right: 30px;
+
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.bottom-left {
+    bottom: 25px;
+    left: 30px;
+
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+
+.bottom-right {
+    bottom: 25px;
+    right: 30px;
+
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+}
+
+
+/* LOGO */
+
+.logo-container {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+    margin-top: 8vh;
+}
+
+.logo-glow {
+    width: 110px;
+    height: 110px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 25px;
+
+    background: rgba(20,190,90,.04);
+
+    box-shadow:
+        0 0 35px rgba(20,190,90,.15);
+}
+
+.logo {
+    width: 85px;
+    height: 85px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 20px;
+
+    background: #16bd5a;
+
+    font-size: 45px;
+
+    box-shadow:
+        0 0 25px rgba(22,189,90,.25);
+}
+
+
+/* TITLE */
+
+.title {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.title h1 {
+    line-height: 1;
+    letter-spacing: 5px;
+}
+
+.title span {
+    display: block;
+
+    color: #19c85d;
+
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.title strong {
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 36px;
+    letter-spacing: 6px;
+}
+
+.title p {
+    margin-top: 15px;
+
+    color: #66736e;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+
+/* LOGIN BOX */
+
+.login-container {
+    position: relative;
+
+    width: 420px;
+    max-width: 90%;
+
+    margin: 35px auto 0;
+}
+
+.login-container h2 {
+    text-align: center;
+
+    color: #18c85b;
+
+    font-size: 20px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 22px;
+}
+
+
+/* INPUT */
+
+.input-box {
+    margin-bottom: 16px;
+}
+
+.input-box label {
+    display: block;
+
+    color: #75817c;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.input-box input {
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1px solid rgba(25,200,93,.25);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: rgba(0,0,0,.25);
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+.input-box input:focus {
+    border-color: #19c85d;
+
+    box-shadow: 0 0 10px rgba(25,200,93,.15);
+}
+
+.input-box input::placeholder {
+    color: #53605a;
+}
+
+
+/* LOGIN BUTTON */
+
+button {
+    width: 100%;
+
+    margin-top: 5px;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #18bd58;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 18px rgba(24,189,88,.18);
+
+    transition: .3s;
+}
+
+button:hover {
+    background: #20d767;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 25px rgba(24,189,88,.35);
+}
+
+
+/* FORGOT PASSWORD */
+
+.forgot {
+    text-align: center;
+
+    margin-top: 12px;
+
+    color: #65716c;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+}
+
+
+/* BOTTOM TEXT */
+
+.bottom-text {
+    position: absolute;
+
+    bottom: 35px;
+
+    width: 100%;
+
+    text-align: center;
+
+    color: #46534e;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}

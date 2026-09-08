@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AR Safety Training</title>
+
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+<div class="home-screen">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="welcome">
+
+            <p id="welcomeText">WELCOME BACK</p>
+
+            <h1 id="userName">User</h1>
+
+            <span>
+                <span id="departmentText">Mining Dept - ID:</span>
+                <span id="userId">---</span>
+            </span>
+
+        </div>
+
+        <div class="profile-avatar">
+            👤
+        </div>
+
+    </header>
+
+
+    <!-- STATISTICS -->
+
+    <section class="statistics">
+
+        <div class="stat-card">
+            <div class="stat-icon">🛡️</div>
+            <p id="scoreText">SAFETY SCORE</p>
+            <h2>85%</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">📚</div>
+            <p id="modulesText">MODULES DONE</p>
+            <h2>12</h2>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon">🔥</div>
+            <p id="streakText">STREAK</p>
+            <h2 id="daysText">7 Days</h2>
+        </div>
+
+    </section>
+
+
+    <!-- START TRAINING -->
+
+    <section class="training-banner">
+
+        <div class="training-content">
+
+            <p id="readyText">READY TO TRAIN?</p>
+
+            <h2 id="trainingTitle">
+                Start Your Safety Training
+            </h2>
+
+            <span id="trainingDescription">
+                Practice real-world industrial safety situations
+                using Augmented Reality.
+            </span>
+
+            <button onclick="startTraining()" id="startButton">
+                START TRAINING →
+            </button>
+
+        </div>
+
+        <div class="training-icon">
+            🥽
+        </div>
+
+    </section>
+
+
+    <!-- SAFETY MODULES -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2 id="modulesTitle">
+                Safety Modules
+            </h2>
+
+            <span id="viewAllModules">
+                View All →
+            </span>
+
+        </div>
+
+
+        <div class="module-container">
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    ⛏️
+                </div>
+
+                <div class="module-info">
+
+                    <h3 id="miningTitle">
+                        Mining Safety
+                    </h3>
+
+                    <p id="miningDescription">
+                        Learn essential safety practices
+                        in mining environments.
+                    </p>
+
+                    <button id="miningButton">
+                        START →
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="module-card">
+
+                <div class="module-icon">
+                    🏭
+                </div>
+
+                <div class="module-info">
+
+                    <h3 id="manufacturingTitle">
+                        Manufacturing Safety
+                    </h3>
+
+                    <p id="manufacturingDescription">
+                        Understand workplace hazards
+                        and safe manufacturing practices.
+                    </p>
+
+                    <button id="manufacturingButton">
+                        START →
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- YOUR PROGRESS -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2 id="progressTitle">
+                Your Progress
+            </h2>
+
+            <span id="viewAllProgress">
+                View All →
+            </span>
+
+        </div>
+
+
+        <div class="progress-card">
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+
+                    <span id="miningProgress">
+                        Mining Safety
+                    </span>
+
+                    <b>80%</b>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"
+                         style="width:80%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+
+                    <span id="fireProgress">
+                        Fire Safety
+                    </span>
+
+                    <b>65%</b>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"
+                         style="width:65%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-title">
+
+                    <span id="electricalProgress">
+                        Electrical Safety
+                    </span>
+
+                    <b>45%</b>
+
+                </div>
+
+                <div class="progress-bar">
+
+                    <div class="progress-fill"
+                         style="width:45%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RECENT ACTIVITY -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2 id="activityTitle">
+                Recent Activity
+            </h2>
+
+        </div>
+
+
+        <div class="activity-card">
+
+            <div class="activity-icon">
+                ✓
+            </div>
+
+            <div class="activity-info">
+
+                <h3 id="activityOne">
+                    Mining Safety Module Completed
+                </h3>
+
+                <p id="activityOneTime">
+                    Today • Safety Training
+                </p>
+
+            </div>
+
+            <span class="completed"
+                  id="completedText">
+                Completed
+            </span>
+
+        </div>
+
+
+        <div class="activity-card">
+
+            <div class="activity-icon">
+                ▶
+            </div>
+
+            <div class="activity-info">
+
+                <h3 id="activityTwo">
+                    Fire Safety Training Started
+                </h3>
+
+                <p id="activityTwoTime">
+                    Yesterday • Safety Training
+                </p>
+
+            </div>
+
+            <span class="continue"
+                  id="continueText">
+                Continue
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <div class="nav-item active">
+
+            <span>⌂</span>
+
+            <p id="homeNav">Home</p>
+
+        </div>
+
+        <div class="nav-item">
+
+            <span>🥽</span>
+
+            <p id="trainingNav">Training</p>
+
+        </div>
+
+        <div class="nav-item">
+
+            <span>📊</span>
+
+            <p id="progressNav">Progress</p>
+
+        </div>
+
+        <div class="nav-item">
+
+            <span>👤</span>
+
+            <p id="profileNav">Profile</p>
+
+        </div>
+
+    </nav>
+
+</div>
+
+
+<script>
+
+/* USER DETAILS */
+
+const username = localStorage.getItem("username");
+
+const selectedLanguage =
+    localStorage.getItem("selectedLanguage");
+
+
+if (username) {
+
+    document.getElementById("userName").textContent = username;
+
+    document.getElementById("userId").textContent = username;
+
+}
+
+
+/* LANGUAGE */
+
+const translations = {
+
+    English: {
+
+        welcome: "WELCOME BACK",
+        department: "Mining Dept - ID:",
+
+        score: "SAFETY SCORE",
+        modules: "MODULES DONE",
+        streak: "STREAK",
+        days: "7 Days",
+
+        ready: "READY TO TRAIN?",
+        trainingTitle: "Start Your Safety Training",
+
+        trainingDescription:
+        "Practice real-world industrial safety situations using Augmented Reality.",
+
+        start: "START TRAINING →",
+
+        modulesTitle: "Safety Modules",
+        viewAll: "View All →",
+
+        mining: "Mining Safety",
+
+        miningDescription:
+        "Learn essential safety practices in mining environments.",
+
+        manufacturing: "Manufacturing Safety",
+
+        manufacturingDescription:
+        "Understand workplace hazards and safe manufacturing practices.",
+
+        progress: "Your Progress",
+
+        fire: "Fire Safety",
+        electrical: "Electrical Safety",
+
+        activity: "Recent Activity",
+
+        activityOne:
+        "Mining Safety Module Completed",
+
+        activityOneTime:
+        "Today • Safety Training",
+
+        completed: "Completed",
+
+        activityTwo:
+        "Fire Safety Training Started",
+
+        activityTwoTime:
+        "Yesterday • Safety Training",
+
+        continue: "Continue",
+
+        home: "Home",
+        training: "Training",
+        progressNav: "Progress",
+        profile: "Profile"
+    },
+
+
+    Hindi: {
+
+        welcome: "वापसी पर स्वागत है",
+        department: "माइनिंग विभाग - आईडी:",
+
+        score: "सुरक्षा स्कोर",
+        modules: "पूर्ण मॉड्यूल",
+        streak: "लगातार दिन",
+        days: "7 दिन",
+
+        ready: "प्रशिक्षण के लिए तैयार?",
+        trainingTitle: "अपना सुरक्षा प्रशिक्षण शुरू करें",
+
+        trainingDescription:
+        "ऑगमेंटेड रियलिटी का उपयोग करके वास्तविक सुरक्षा परिस्थितियों का अभ्यास करें।",
+
+        start: "प्रशिक्षण शुरू करें →",
+
+        modulesTitle: "सुरक्षा मॉड्यूल",
+        viewAll: "सभी देखें →",
+
+        mining: "खनन सुरक्षा",
+
+        miningDescription:
+        "खनन वातावरण में आवश्यक सुरक्षा प्रक्रियाएं सीखें।",
+
+        manufacturing: "विनिर्माण सुरक्षा",
+
+        manufacturingDescription:
+        "कार्यस्थल के खतरों और सुरक्षित विनिर्माण प्रक्रियाओं को समझें।",
+
+        progress: "आपकी प्रगति",
+
+        fire: "अग्नि सुरक्षा",
+        electrical: "विद्युत सुरक्षा",
+
+        activity: "हाल की गतिविधि",
+
+        activityOne:
+        "खनन सुरक्षा मॉड्यूल पूरा हुआ",
+
+        activityOneTime:
+        "आज • सुरक्षा प्रशिक्षण",
+
+        completed: "पूर्ण",
+
+        activityTwo:
+        "अग्नि सुरक्षा प्रशिक्षण शुरू हुआ",
+
+        activityTwoTime:
+        "कल • सुरक्षा प्रशिक्षण",
+
+        continue: "जारी रखें",
+
+        home: "होम",
+        training: "प्रशिक्षण",
+        progressNav: "प्रगति",
+        profile: "प्रोफ़ाइल"
+    },
+
+
+    Tamil: {
+
+        welcome: "மீண்டும் வரவேற்கிறோம்",
+        department: "சுரங்கத் துறை - ID:",
+
+        score: "பாதுகாப்பு மதிப்பெண்",
+        modules: "முடிக்கப்பட்ட தொகுதிகள்",
+        streak: "தொடர்ச்சி",
+        days: "7 நாட்கள்",
+
+        ready: "பயிற்சிக்கு தயாரா?",
+        trainingTitle:
+        "உங்கள் பாதுகாப்பு பயிற்சியைத் தொடங்குங்கள்",
+
+        trainingDescription:
+        "Augmented Reality மூலம் உண்மையான பாதுகாப்பு சூழ்நிலைகளைப் பயிற்சி செய்யுங்கள்.",
+
+        start: "பயிற்சியைத் தொடங்கு →",
+
+        modulesTitle: "பாதுகாப்பு தொகுதிகள்",
+        viewAll: "அனைத்தையும் பார்க்க →",
+
+        mining: "சுரங்க பாதுகாப்பு",
+
+        miningDescription:
+        "சுரங்க சூழலில் தேவையான பாதுகாப்பு நடைமுறைகளைக் கற்றுக்கொள்ளுங்கள்.",
+
+        manufacturing: "உற்பத்தி பாதுகாப்பு",
+
+        manufacturingDescription:
+        "பணியிட அபாயங்கள் மற்றும் பாதுகாப்பான உற்பத்தி நடைமுறைகளைப் புரிந்துகொள்ளுங்கள்.",
+
+        progress: "உங்கள் முன்னேற்றம்",
+
+        fire: "தீ பாதுகாப்பு",
+        electrical: "மின் பாதுகாப்பு",
+
+        activity: "சமீபத்திய செயல்பாடு",
+
+        activityOne:
+        "சுரங்க பாதுகாப்பு தொகுதி முடிக்கப்பட்டது",
+
+        activityOneTime:
+        "இன்று • பாதுகாப்பு பயிற்சி",
+
+        completed: "முடிந்தது",
+
+        activityTwo:
+        "தீ பாதுகாப்பு பயிற்சி தொடங்கப்பட்டது",
+
+        activityTwoTime:
+        "நேற்று • பாதுகாப்பு பயிற்சி",
+
+        continue: "தொடரவும்",
+
+        home: "முகப்பு",
+        training: "பயிற்சி",
+        progressNav: "முன்னேற்றம்",
+        profile: "சுயவிவரம்"
+    }
+
+};
+
+
+const language =
+    translations[selectedLanguage] || translations.English;
+
+
+/* APPLY LANGUAGE */
+
+document.getElementById("welcomeText").textContent =
+language.welcome;
+
+document.getElementById("departmentText").textContent =
+language.department;
+
+document.getElementById("scoreText").textContent =
+language.score;
+
+document.getElementById("modulesText").textContent =
+language.modules;
+
+document.getElementById("streakText").textContent =
+language.streak;
+
+document.getElementById("daysText").textContent =
+language.days;
+
+document.getElementById("readyText").textContent =
+language.ready;
+
+document.getElementById("trainingTitle").textContent =
+language.trainingTitle;
+
+document.getElementById("trainingDescription").textContent =
+language.trainingDescription;
+
+document.getElementById("startButton").textContent =
+language.start;
+
+document.getElementById("modulesTitle").textContent =
+language.modulesTitle;
+
+document.getElementById("viewAllModules").textContent =
+language.viewAll;
+
+document.getElementById("miningTitle").textContent =
+language.mining;
+
+document.getElementById("miningDescription").textContent =
+language.miningDescription;
+
+document.getElementById("manufacturingTitle").textContent =
+language.manufacturing;
+
+document.getElementById("manufacturingDescription").textContent =
+language.manufacturingDescription;
+
+document.getElementById("progressTitle").textContent =
+language.progress;
+
+document.getElementById("viewAllProgress").textContent =
+language.viewAll;
+
+document.getElementById("miningProgress").textContent =
+language.mining;
+
+document.getElementById("fireProgress").textContent =
+language.fire;
+
+document.getElementById("electricalProgress").textContent =
+language.electrical;
+
+document.getElementById("activityTitle").textContent =
+language.activity;
+
+document.getElementById("activityOne").textContent =
+language.activityOne;
+
+document.getElementById("activityOneTime").textContent =
+language.activityOneTime;
+
+document.getElementById("completedText").textContent =
+language.completed;
+
+document.getElementById("activityTwo").textContent =
+language.activityTwo;
+
+document.getElementById("activityTwoTime").textContent =
+language.activityTwoTime;
+
+document.getElementById("continueText").textContent =
+language.continue;
+
+document.getElementById("homeNav").textContent =
+language.home;
+
+document.getElementById("trainingNav").textContent =
+language.training;
+
+document.getElementById("progressNav").textContent =
+language.progressNav;
+
+document.getElementById("profileNav").textContent =
+language.profile;
+
+
+/* START TRAINING */
+
+function startTraining() {
+
+    window.location.href = "training.html";
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Emergency Evacuation</title>
+    <link rel="stylesheet" href="scenario.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <header class="header">
+
+        <button class="back-btn" onclick="goBack()">←</button>
+
+        <div>
+            <p class="page-label fire-label">SAFETY TRAINING</p>
+            <h1>Fire / Emergency Evacuation</h1>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- Scenario Banner -->
+        <section class="scenario-banner fire-theme">
+
+            <div class="scenario-icon fire-icon">🔥</div>
+
+            <div class="banner-content">
+
+                <h2>Fire / Emergency Evacuation</h2>
+
+                <p>
+                    Learn the correct fire response, emergency evacuation
+                    and assembly procedures.
+                </p>
+
+                <div class="stats-row">
+
+                    <div class="info-box">
+                        <strong>4</strong>
+                        <span>Modules</span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>0</strong>
+                        <span>Completed</span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>0%</strong>
+                        <span>Progress</span>
+                    </div>
+
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress fire-progress"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Modules -->
+        <section class="modules-section">
+
+            <div class="section-heading">
+                <h2>Training Modules</h2>
+                <span>0 of 4 completed</span>
+            </div>
+
+
+            <div class="module-card"
+                 onclick="openInstructions('Fire Detection')">
+
+                <div class="module-icon fire-module-icon">🔥</div>
+
+                <div class="module-details">
+                    <h3>Fire Detection</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>15 min</span>
+                        <span class="priority critical">Critical</span>
+                    </div>
+                </div>
+
+                <div class="module-action">→</div>
+
+            </div>
+
+
+            <div class="module-card"
+                 onclick="openInstructions('Emergency Alarm')">
+
+                <div class="module-icon fire-module-icon">!</div>
+
+                <div class="module-details">
+                    <h3>Emergency Alarm</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>10 min</span>
+                        <span class="priority high">High</span>
+                    </div>
+                </div>
+
+                <div class="module-action">→</div>
+
+            </div>
+
+
+            <div class="module-card"
+                 onclick="openInstructions('Evacuation Procedure')">
+
+                <div class="module-icon fire-module-icon">↗</div>
+
+                <div class="module-details">
+                    <h3>Evacuation Procedure</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>20 min</span>
+                        <span class="priority critical">Critical</span>
+                    </div>
+                </div>
+
+                <div class="module-action">→</div>
+
+            </div>
+
+
+            <div class="module-card"
+                 onclick="openInstructions('Emergency Assembly Point')">
+
+                <div class="module-icon fire-module-icon">⌖</div>
+
+                <div class="module-details">
+                    <h3>Emergency Assembly Point</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>15 min</span>
+                        <span class="priority medium">Medium</span>
+                    </div>
+                </div>
+
+                <div class="module-action">→</div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <nav class="bottom-nav">
+
+        <div class="nav-item" onclick="goHome()">
+            <span>⌂</span>
+            <p>Home</p>
+        </div>
+
+        <div class="nav-item active fire-active">
+            <span>▣</span>
+            <p>Training</p>
+        </div>
+
+        <div class="nav-item">
+            <span>◔</span>
+            <p>Progress</p>
+        </div>
+
+        <div class="nav-item">
+            <span>♙</span>
+            <p>Profile</p>
+        </div>
+
+    </nav>
+
+</div>
+
+
+<script>
+
+function goBack() {
+    window.location.href = "training.html";
+}
+
+function goHome() {
+    window.location.href = "home.html";
+}
+
+function openInstructions(module) {
+
+    localStorage.setItem("selectedModule", module);
+    localStorage.setItem("selectedScenario", "Fire / Emergency Evacuation");
+
+    window.location.href = "instructions.html";
+}
+
+</script>
+
+</body>
+</html>

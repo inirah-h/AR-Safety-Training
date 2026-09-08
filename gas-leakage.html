@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Leakage</title>
+    <link rel="stylesheet" href="scenario.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <header class="header">
+        <button class="back-btn" onclick="goBack()">←</button>
+
+        <div>
+            <p class="page-label">SAFETY TRAINING</p>
+            <h1>Gas Leakage</h1>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- Scenario Banner -->
+        <section class="scenario-banner gas-theme">
+
+            <div class="scenario-icon">⚠</div>
+
+            <div class="banner-content">
+                <h2>Gas Leakage</h2>
+
+                <p>
+                    Learn how to identify gas leaks and respond safely
+                    during a gas emergency.
+                </p>
+
+                <div class="stats-row">
+
+                    <div class="info-box">
+                        <strong>4</strong>
+                        <span>Modules</span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>1</strong>
+                        <span>Completed</span>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>25%</strong>
+                        <span>Progress</span>
+                    </div>
+
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress gas-progress"></div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Modules -->
+        <section class="modules-section">
+
+            <div class="section-heading">
+                <h2>Training Modules</h2>
+                <span>1 of 4 completed</span>
+            </div>
+
+
+            <div class="module-card completed"
+                 onclick="openInstructions('Gas Leak Response')">
+
+                <div class="module-icon completed-icon">✓</div>
+
+                <div class="module-details">
+                    <h3>Gas Leak Response</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>15 min</span>
+                        <span class="priority critical">Critical</span>
+                    </div>
+                </div>
+
+                <div class="module-action completed-action">✓</div>
+
+            </div>
+
+
+            <div class="module-card"
+                 onclick="openInstructions('Leak Detection')">
+
+                <div class="module-icon gas-icon">⌁</div>
+
+                <div class="module-details">
+                    <h3>Leak Detection</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>20 min</span>
+                        <span class="priority high">High</span>
+                    </div>
+                </div>
+
+                <div class="module-action">→</div>
+
+            </div>
+
+
+            <div class="module-card"
+                 onclick="openInstructions('Emergency Isolation')">
+
+                <div class="module-icon medium-icon">!</div>
+
+                <div class="module-details">
+                    <h3>Emergency Isolation</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>15 min</span>
+                        <span class="priority medium">Medium</span>
+                    </div>
+                </div>
+
+                <div class="module-action">→</div>
+
+            </div>
+
+
+            <div class="module-card"
+                 onclick="openInstructions('Evacuation Procedure')">
+
+                <div class="module-icon danger-icon">↗</div>
+
+                <div class="module-details">
+                    <h3>Evacuation Procedure</h3>
+
+                    <div class="module-meta">
+                        <span>◷</span>
+                        <span>20 min</span>
+                        <span class="priority critical">Critical</span>
+                    </div>
+                </div>
+
+                <div class="module-action">→</div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <nav class="bottom-nav">
+
+        <div class="nav-item" onclick="goHome()">
+            <span>⌂</span>
+            <p>Home</p>
+        </div>
+
+        <div class="nav-item active">
+            <span>▣</span>
+            <p>Training</p>
+        </div>
+
+        <div class="nav-item">
+            <span>◔</span>
+            <p>Progress</p>
+        </div>
+
+        <div class="nav-item">
+            <span>♙</span>
+            <p>Profile</p>
+        </div>
+
+    </nav>
+
+</div>
+
+
+<script>
+
+function goBack() {
+    window.location.href = "training.html";
+}
+
+function goHome() {
+    window.location.href = "home.html";
+}
+
+function openInstructions(module) {
+    localStorage.setItem("selectedModule", module);
+    localStorage.setItem("selectedScenario", "Gas Leakage");
+
+    window.location.href = "instructions.html";
+}
+
+</script>
+
+</body>
+</html>

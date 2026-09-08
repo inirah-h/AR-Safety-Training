@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Scenarios</title>
+    <link rel="stylesheet" href="training.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- Header -->
+    <header class="top-header">
+
+        <button class="back-btn" onclick="goHome()">←</button>
+
+        <div class="header-text">
+            <p>SAFETY TRAINING</p>
+            <h1>Training Scenarios</h1>
+            <span>Choose a scenario to begin your training</span>
+        </div>
+
+    </header>
+
+
+    <!-- Scenario Cards -->
+    <main class="training-content">
+
+
+        <!-- GAS LEAKAGE -->
+        <div class="scenario-card" onclick="openGasScenario()">
+
+            <div class="scenario-top">
+
+                <div class="scenario-icon gas-icon">
+                    ⚠
+                </div>
+
+                <div class="scenario-arrow">
+                    →
+                </div>
+
+            </div>
+
+            <h2>Gas Leakage</h2>
+
+            <p>
+                Learn how to identify gas leaks and respond safely
+                during a gas emergency.
+            </p>
+
+            <div class="progress-info">
+                <span>Progress</span>
+                <strong>25%</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div class="gas-progress"></div>
+            </div>
+
+            <div class="scenario-bottom">
+                <span>4 Modules</span>
+                <span>1 Completed</span>
+            </div>
+
+        </div>
+
+
+        <!-- FIRE / EMERGENCY EVACUATION -->
+        <div class="scenario-card" onclick="openFireScenario()">
+
+            <div class="scenario-top">
+
+                <div class="scenario-icon fire-icon">
+                    🔥
+                </div>
+
+                <div class="scenario-arrow">
+                    →
+                </div>
+
+            </div>
+
+            <h2>Fire / Emergency Evacuation</h2>
+
+            <p>
+                Learn the correct fire response, emergency evacuation
+                and assembly procedures.
+            </p>
+
+            <div class="progress-info">
+                <span>Progress</span>
+                <strong>0%</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div class="fire-progress"></div>
+            </div>
+
+            <div class="scenario-bottom">
+                <span>4 Modules</span>
+                <span>0 Completed</span>
+            </div>
+
+        </div>
+
+
+        <!-- MACHINE MALFUNCTION -->
+        <div class="scenario-card" onclick="openMachineScenario()">
+
+            <div class="scenario-top">
+
+                <div class="scenario-icon machine-icon">
+                    ⚙
+                </div>
+
+                <div class="scenario-arrow">
+                    →
+                </div>
+
+            </div>
+
+            <h2>Machine Malfunction</h2>
+
+            <p>
+                Learn how to identify machine faults and take
+                the correct emergency actions.
+            </p>
+
+            <div class="progress-info">
+                <span>Progress</span>
+                <strong>0%</strong>
+            </div>
+
+            <div class="progress-bar">
+                <div class="machine-progress"></div>
+            </div>
+
+            <div class="scenario-bottom">
+                <span>4 Modules</span>
+                <span>0 Completed</span>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+
+        <div class="nav-item" onclick="goHome()">
+            <span>⌂</span>
+            <p>Home</p>
+        </div>
+
+        <div class="nav-item active">
+            <span>▣</span>
+            <p>Training</p>
+        </div>
+
+        <div class="nav-item">
+            <span>◔</span>
+            <p>Progress</p>
+        </div>
+
+        <div class="nav-item">
+            <span>♙</span>
+            <p>Profile</p>
+        </div>
+
+    </nav>
+
+</div>
+
+
+<script>
+
+function goHome() {
+    window.location.href = "home.html";
+}
+
+function openGasScenario() {
+    window.location.href = "gas-leakage.html";
+}
+
+function openFireScenario() {
+    window.location.href = "fire-emergency.html";
+}
+
+function openMachineScenario() {
+    window.location.href = "machine-malfunction.html";
+}
+
+</script>
+
+</body>
+</html>

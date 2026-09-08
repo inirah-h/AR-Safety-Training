@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #07111f;
+    color: white;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    margin: auto;
+    padding-bottom: 90px;
+}
+
+
+/* Header */
+
+.top-header {
+    padding: 25px 20px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.back-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: #121d2b;
+    border: 1px solid #263548;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.header-title h1 {
+    font-size: 23px;
+}
+
+.header-title p {
+    color: #8490a0;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+/* Content */
+
+.training-content {
+    padding: 5px 20px 30px;
+}
+
+
+/* Scenario Card */
+
+.scenario-card {
+    background: #121d2b;
+    border: 1px solid #263548;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.scenario-card:hover {
+    transform: translateY(-2px);
+    border-color: #3a4b60;
+}
+
+.scenario-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scenario-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.gas-icon {
+    background: rgba(255, 145, 50, 0.15);
+    color: #ff9638;
+}
+
+.fire-icon {
+    background: rgba(255, 65, 65, 0.15);
+    color: #ff4d4d;
+}
+
+.machine-icon {
+    background: rgba(95, 100, 255, 0.15);
+    color: #7c82ff;
+}
+
+.arrow {
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: #1a2737;
+    color: #b8c1cd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.scenario-card h2 {
+    font-size: 19px;
+    margin-top: 18px;
+}
+
+.scenario-card p {
+    color: #8793a3;
+    font-size: 13px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+
+/* Progress */
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    font-size: 11px;
+    color: #8d98a8;
+}
+
+.progress-info span:last-child {
+    color: #d7dde5;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 6px;
+    background: #263342;
+    border-radius: 10px;
+    margin-top: 8px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.gas-progress {
+    width: 25%;
+    background: #ff9638;
+}
+
+.fire-progress {
+    width: 0%;
+    background: #ff4d4d;
+}
+
+.machine-progress {
+    width: 0%;
+    background: #7c82ff;
+}
+
+
+/* Module Info */
+
+.module-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13px;
+    color: #758294;
+    font-size: 11px;
+}
+
+
+/* Bottom Navigation */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 500px;
+    height: 75px;
+    background: #0d1826;
+    border-top: 1px solid #243244;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    z-index: 100;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #687587;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav-item span {
+    font-size: 20px;
+}
+
+.nav-item p {
+    font-size: 11px;
+}
+
+.nav-item.active {
+    color: #35d078;
+}
