@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #07131d;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-container {
+    width: 100%;
+    max-width: 500px;
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 50% 35%, rgba(20, 100, 60, 0.20), transparent 35%),
+        linear-gradient(180deg, #07150f, #07131d);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Corner designs */
+
+.corner {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-color: rgba(20, 190, 100, 0.35);
+}
+
+.top-left {
+    top: 12px;
+    left: 20px;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.top-right {
+    top: 12px;
+    right: 20px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}
+
+.bottom-left {
+    bottom: 12px;
+    left: 20px;
+    border-bottom: 1px solid;
+    border-left: 1px solid;
+}
+
+.bottom-right {
+    bottom: 12px;
+    right: 20px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+}
+
+/* Shield */
+
+.shield-box {
+    width: 120px;
+    height: 120px;
+    border-radius: 25px;
+    background: rgba(20, 150, 75, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 35px rgba(20, 200, 90, 0.10);
+    margin-bottom: 25px;
+}
+
+.shield {
+    width: 78px;
+    height: 78px;
+    border-radius: 20px;
+    background: #19bd5b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 0 30px rgba(25, 189, 91, 0.35);
+}
+
+/* Title */
+
+h1 {
+    text-align: center;
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: 4px;
+    font-weight: 900;
+}
+
+h1 span {
+    color: #20c963;
+}
+
+.subtitle {
+    margin-top: 12px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #68736f;
+    font-weight: bold;
+}
+
+/* Loading */
+
+.progress-container {
+    width: 155px;
+    height: 6px;
+    background: #173128;
+    border-radius: 10px;
+    margin-top: 35px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #20c963;
+    border-radius: 10px;
+    animation: loading 10s linear forwards;
+}
+
+.loading-text {
+    margin-top: 20px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #68736f;
+    font-weight: bold;
+}
+
+@keyframes loading {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}

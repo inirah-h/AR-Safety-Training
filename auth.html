@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Safety Training - Login</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <div class="logo-section">
+        <div class="logo-box">✓</div>
+
+        <h1>
+            <span>AR SAFETY</span><br>
+            TRAINING
+        </h1>
+
+        <p>JHARKHAND INDUSTRIAL SAFETY</p>
+    </div>
+
+    <!-- LOGIN / REGISTER SELECTION -->
+
+    <div id="choiceScreen" class="screen">
+
+        <h2>Welcome</h2>
+
+        <p class="description">
+            Choose an option to continue
+        </p>
+
+        <button class="primary-btn" onclick="showLogin()">
+            LOGIN
+        </button>
+
+        <button class="secondary-btn" onclick="showRegister()">
+            REGISTER
+        </button>
+
+    </div>
+
+
+    <!-- LOGIN SCREEN -->
+
+    <div id="loginScreen" class="screen hidden">
+
+        <button class="back-btn" onclick="showChoice()">← Back</button>
+
+        <h2>Login</h2>
+
+        <p class="description">
+            Login using your registered email or phone number
+        </p>
+
+        <label>Email or Phone Number</label>
+
+        <input
+            type="text"
+            id="loginIdentifier"
+            placeholder="Enter email or phone number"
+        >
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Enter password"
+        >
+
+        <p id="loginError" class="error"></p>
+
+        <button class="primary-btn" onclick="loginUser()">
+            LOGIN
+        </button>
+
+        <p class="switch-text">
+            Don't have an account?
+            <span onclick="showRegister()">Register</span>
+        </p>
+
+    </div>
+
+
+    <!-- REGISTER SCREEN -->
+
+    <div id="registerScreen" class="screen hidden">
+
+        <button class="back-btn" onclick="showChoice()">← Back</button>
+
+        <h2>Create Account</h2>
+
+        <p class="description">
+            Register to start your safety training
+        </p>
+
+        <label>Full Name</label>
+
+        <input
+            type="text"
+            id="registerName"
+            placeholder="Enter your full name"
+        >
+
+        <label>Username</label>
+
+        <input
+            type="text"
+            id="registerUsername"
+            placeholder="Choose a unique username"
+        >
+
+        <small>
+            Username must be unique
+        </small>
+
+        <label>Email ID</label>
+
+        <input
+            type="email"
+            id="registerEmail"
+            placeholder="example@email.com"
+        >
+
+        <label>Phone Number</label>
+
+        <input
+            type="tel"
+            id="registerPhone"
+            placeholder="10 digit phone number"
+            maxlength="10"
+        >
+
+        <p class="verify-note">
+            At least one valid Email ID or Phone Number is required.
+        </p>
+
+        <button class="primary-btn" onclick="verifyContact()">
+            VERIFY EMAIL / PHONE
+        </button>
+
+        <p id="registerError" class="error"></p>
+
+    </div>
+
+
+    <!-- OTP SCREEN -->
+
+    <div id="otpScreen" class="screen hidden">
+
+        <button class="back-btn" onclick="showRegister()">← Back</button>
+
+        <h2>Verify Contact</h2>
+
+        <p class="description">
+            Enter the OTP sent to your verified contact
+        </p>
+
+        <div class="otp-demo">
+            Demo OTP:
+            <strong id="demoOtp"></strong>
+        </div>
+
+        <input
+            type="text"
+            id="otpInput"
+            placeholder="Enter 6 digit OTP"
+            maxlength="6"
+        >
+
+        <p id="otpError" class="error"></p>
+
+        <button class="primary-btn" onclick="verifyOtp()">
+            VERIFY OTP
+        </button>
+
+    </div>
+
+
+    <!-- PASSWORD SCREEN -->
+
+    <div id="passwordScreen" class="screen hidden">
+
+        <h2>Set Password</h2>
+
+        <p class="description">
+            Create a strong password for your account
+        </p>
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            id="newPassword"
+            placeholder="Create password"
+        >
+
+        <div class="password-rules">
+            <p id="ruleLength">✗ At least 8 characters</p>
+            <p id="ruleLetter">✗ At least 1 alphabet</p>
+            <p id="ruleNumber">✗ At least 1 number</p>
+            <p id="ruleSpecial">✗ At least 1 special character</p>
+        </div>
+
+        <label>Confirm Password</label>
+
+        <input
+            type="password"
+            id="confirmPassword"
+            placeholder="Re-enter password"
+        >
+
+        <p id="passwordError" class="error"></p>
+
+        <button class="primary-btn" onclick="completeRegistration()">
+            CREATE ACCOUNT
+        </button>
+
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>
